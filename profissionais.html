@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário para Profissionais - Pesquisa TEA T4B</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-gradient shadow-lg">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-puzzle-piece me-2"></i>
+                Pesquisa TEA T4B
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-home me-1"></i>
+                    Início
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="py-5 bg-gradient-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <h1 class="display-4 fw-bold mb-3">
+                        <i class="fas fa-user-tie me-3"></i>
+                        Formulário para Profissionais
+                    </h1>
+                    <p class="lead mb-0">
+                        Pesquisa TEA - T4B Medicina Fimca<br>
+                        <small class="opacity-75">Jaru, Rondônia</small>
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end" data-aos="fade-left">
+                    <div class="d-inline-block bg-white bg-opacity-10 rounded-4 p-4">
+                        <i class="fas fa-stethoscope fa-4x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- Back Button -->
+                    <div class="mb-4" data-aos="fade-up">
+                        <a href="index.html" class="btn btn-outline-primary rounded-pill">
+                            <i class="fas fa-arrow-left me-2"></i>
+                            Voltar ao Início
+                        </a>
+                    </div>
+
+                    <!-- Form Container -->
+                    <div class="form-container p-4 p-lg-5" data-aos="fade-up" data-aos-delay="200">
+                        <!-- Introduction -->
+                        <div class="text-center mb-5">
+                            <h2 class="h3 fw-bold text-primary mb-3">Pesquisa com Profissionais do Centro</h2>
+                            <p class="text-muted">
+                                Este formulário destina-se aos profissionais que trabalham no centro com crianças com TEA (Transtorno do Espectro Autista). Suas respostas são fundamentais para nossa pesquisa acadêmica.
+                            </p>
+                        </div>
+
+                        <form id="profissionaisForm">
+                            <!-- Área de Atuação -->
+                            <fieldset data-aos="fade-up" data-aos-delay="300">
+                                <legend>
+                                    <i class="fas fa-briefcase me-2 text-primary"></i>
+                                    Área de Atuação
+                                </legend>
+                                
+                                <div class="form-group required">
+                                    <label class="form-label">
+                                        <i class="fas fa-user-md me-1"></i>
+                                        Qual a sua área de atuação dentro do centro?
+                                    </label>
+                                    <div class="row g-2 mt-2">
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="areaAtuacao" value="psicologia" id="psicologia" required>
+                                                <label class="form-check-label" for="psicologia">Psicologia</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="areaAtuacao" value="fonoaudiologia" id="fonoaudiologia" required>
+                                                <label class="form-check-label" for="fonoaudiologia">Fonoaudiologia</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="areaAtuacao" value="terapia-ocupacional" id="terapiaOcupacional" required>
+                                                <label class="form-check-label" for="terapiaOcupacional">Terapia Ocupacional</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="areaAtuacao" value="pedagogia" id="pedagogia" required>
+                                                <label class="form-check-label" for="pedagogia">Pedagogia</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="areaAtuacao" value="fisioterapia" id="fisioterapia" required>
+                                                <label class="form-check-label" for="fisioterapia">Fisioterapia</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="areaAtuacao" value="outro" id="outroArea" required>
+                                                <label class="form-check-label" for="outroArea">Outro</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mt-3" id="outroAreaGroup" style="display: none;">
+                                        <label for="outroAreaEspecificar" class="form-label">Especifique:</label>
+                                        <input type="text" class="form-control" id="outroAreaEspecificar" name="outroAreaEspecificar">
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <!-- Experiência -->
+                            <fieldset data-aos="fade-up" data-aos-delay="400">
+                                <legend>
+                                    <i class="fas fa-clock me-2 text-success"></i>
+                                    Experiência Profissional
+                                </legend>
+                                
+                                <div class="form-group required">
+                                    <label class="form-label">
+                                        <i class="fas fa-calendar-alt me-1"></i>
+                                        Há quanto tempo você trabalha com crianças com TEA?
+                                    </label>
+                                    <div class="row g-2 mt-2">
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="tempoExperiencia" value="menos-1-ano" id="menos1ano" required>
+                                                <label class="form-check-label" for="menos1ano">Menos de 1 ano</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="tempoExperiencia" value="1-3-anos" id="1a3anos" required>
+                                                <label class="form-check-label" for="1a3anos">De 1 a 3 anos</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="tempoExperiencia" value="4-6-anos" id="4a6anos" required>
+                                                <label class="form-check-label" for="4a6anos">De 4 a 6 anos</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="tempoExperiencia" value="mais-6-anos" id="mais6anos" required>
+                                                <label class="form-check-label" for="mais6anos">Mais de 6 anos</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <!-- Observações sobre Benefícios -->
+                            <fieldset data-aos="fade-up" data-aos-delay="500">
+                                <legend>
+                                    <i class="fas fa-chart-line me-2 text-success"></i>
+                                    Benefícios Observados
+                                </legend>
+                                
+                                <div class="form-group">
+                                    <label for="beneficiosBiopsicossociais" class="form-label">
+                                        <i class="fas fa-heart me-1"></i>
+                                        Quais benefícios biopsicossociais você observa com maior frequência nas crianças atendidas no centro?
+                                    </label>
+                                    <textarea class="form-control" id="beneficiosBiopsicossociais" name="beneficiosBiopsicossociais" rows="4" placeholder="Descreva os benefícios que você observa com mais frequência..."></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="atividadesImpacto" class="form-label">
+                                        <i class="fas fa-star me-1"></i>
+                                        Quais atividades ou terapias você percebe que têm maior impacto positivo no desenvolvimento das crianças?
+                                    </label>
+                                    <textarea class="form-control" id="atividadesImpacto" name="atividadesImpacto" rows="4" placeholder="Descreva as atividades ou terapias mais eficazes..."></textarea>
+                                </div>
+                            </fieldset>
+
+                            <!-- Desafios -->
+                            <fieldset data-aos="fade-up" data-aos-delay="600">
+                                <legend>
+                                    <i class="fas fa-exclamation-triangle me-2 text-warning"></i>
+                                    Desafios no Tratamento
+                                </legend>
+                                
+                                <div class="form-group">
+                                    <label for="desafiosTerapeuticos" class="form-label">
+                                        <i class="fas fa-mountain me-1"></i>
+                                        Quais são os maiores desafios enfrentados no processo terapêutico com crianças com TEA?
+                                    </label>
+                                    <textarea class="form-control" id="desafiosTerapeuticos" name="desafiosTerapeuticos" rows="4" placeholder="Descreva os principais desafios que você enfrenta..."></textarea>
+                                </div>
+                            </fieldset>
+
+                            <!-- Impacto Familiar -->
+                            <fieldset data-aos="fade-up" data-aos-delay="700">
+                                <legend>
+                                    <i class="fas fa-home me-2 text-info"></i>
+                                    Impacto na Vida Familiar
+                                </legend>
+                                
+                                <div class="form-group required">
+                                    <label class="form-label">
+                                        <i class="fas fa-users me-1"></i>
+                                        Você acredita que o acompanhamento oferecido pelo centro tem impacto também na vida familiar da criança?
+                                    </label>
+                                    <div class="row g-2 mt-2">
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="impactoFamiliar" value="sim" id="impactoSim" required>
+                                                <label class="form-check-label" for="impactoSim">Sim</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="impactoFamiliar" value="nao" id="impactoNao" required>
+                                                <label class="form-check-label" for="impactoNao">Não</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="impactoFamiliar" value="em-parte" id="impactoParte" required>
+                                                <label class="form-check-label" for="impactoParte">Em parte</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group" id="impactoDetalheGroup" style="display: none;">
+                                    <label for="impactoDetalhe" class="form-label">
+                                        <i class="fas fa-comment me-1"></i>
+                                        Se sim, de que forma?
+                                    </label>
+                                    <textarea class="form-control" id="impactoDetalhe" name="impactoDetalhe" rows="3" placeholder="Descreva como o acompanhamento impacta a vida familiar..."></textarea>
+                                </div>
+                            </fieldset>
+
+                            <!-- Colaboração entre Profissionais -->
+                            <fieldset data-aos="fade-up" data-aos-delay="800">
+                                <legend>
+                                    <i class="fas fa-handshake me-2 text-primary"></i>
+                                    Colaboração Multidisciplinar
+                                </legend>
+                                
+                                <div class="form-group required">
+                                    <label class="form-label">
+                                        <i class="fas fa-people-arrows me-1"></i>
+                                        De que forma os profissionais do centro colaboram entre si no tratamento das crianças?
+                                    </label>
+                                    <div class="row g-2 mt-2">
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="colaboracao" value="reunioes-periodicas" id="reunioesPeriodicas" required>
+                                                <label class="form-check-label" for="reunioesPeriodicas">Através de reuniões periódicas</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="colaboracao" value="acompanhamento-integrado" id="acompanhamentoIntegrado" required>
+                                                <label class="form-check-label" for="acompanhamentoIntegrado">Acompanhamento multidisciplinar integrado</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="colaboracao" value="comunicacao-pontual" id="comunicacaoPontual" required>
+                                                <label class="form-check-label" for="comunicacaoPontual">Comunicação pontual entre áreas</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="colaboracao" value="outro-colaboracao" id="outroColaboracao" required>
+                                                <label class="form-check-label" for="outroColaboracao">Outro</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mt-3" id="outroColaboracaoGroup" style="display: none;">
+                                        <label for="outroColaboracaoEspecificar" class="form-label">Especifique:</label>
+                                        <input type="text" class="form-control" id="outroColaboracaoEspecificar" name="outroColaboracaoEspecificar">
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <!-- Submit Section -->
+                            <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="900">
+                                <button type="submit" class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-lg">
+                                    <i class="fas fa-paper-plane me-2"></i>
+                                    Enviar Formulário
+                                </button>
+                                
+                                <div class="mt-3">
+                                    <small class="text-muted">
+                                        <i class="fas fa-lock me-1"></i>
+                                        Suas informações são confidenciais e destinadas exclusivamente à pesquisa acadêmica
+                                    </small>
+                                </div>
+                            </div>
+
+                            <!-- Loading and Messages -->
+                            <div id="loading" class="loading">
+                                <div class="spinner"></div>
+                                <p class="text-muted">Enviando formulário...</p>
+                            </div>
+
+                            <div id="successMessage" class="success-message">
+                                <i class="fas fa-check-circle me-2"></i>
+                                <strong>Sucesso!</strong> Formulário enviado com sucesso. Obrigado pela sua participação!
+                            </div>
+
+                            <div id="errorMessage" class="error-message">
+                                <i class="fas fa-exclamation-circle me-2"></i>
+                                <strong>Erro!</strong> Ocorreu um erro ao enviar o formulário. Tente novamente.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">
+                        <i class="fas fa-puzzle-piece me-2 text-primary"></i>
+                        &copy; 2024 - Pesquisa TEA - T4B Medicina Fimca
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0 text-light opacity-75">
+                        Desenvolvido para fins acadêmicos
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 600,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Show/hide "outro" fields
+        document.querySelectorAll('input[name="areaAtuacao"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const outroGroup = document.getElementById('outroAreaGroup');
+                if (this.value === 'outro') {
+                    outroGroup.style.display = 'block';
+                    document.getElementById('outroAreaEspecificar').required = true;
+                } else {
+                    outroGroup.style.display = 'none';
+                    document.getElementById('outroAreaEspecificar').required = false;
+                }
+            });
+        });
+
+        document.querySelectorAll('input[name="colaboracao"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const outroGroup = document.getElementById('outroColaboracaoGroup');
+                if (this.value === 'outro-colaboracao') {
+                    outroGroup.style.display = 'block';
+                    document.getElementById('outroColaboracaoEspecificar').required = true;
+                } else {
+                    outroGroup.style.display = 'none';
+                    document.getElementById('outroColaboracaoEspecificar').required = false;
+                }
+            });
+        });
+
+        // Show/hide impact detail field
+        document.querySelectorAll('input[name="impactoFamiliar"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const detalheGroup = document.getElementById('impactoDetalheGroup');
+                if (this.value === 'sim' || this.value === 'em-parte') {
+                    detalheGroup.style.display = 'block';
+                } else {
+                    detalheGroup.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    
+    <!-- Form Script -->
+    <script src="script-profissionais.js"></script>
+</body>
+</html>

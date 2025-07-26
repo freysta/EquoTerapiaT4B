@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário para Famílias - Pesquisa TEA T4B</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-gradient shadow-lg">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-puzzle-piece me-2"></i>
+                Pesquisa TEA T4B
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-home me-1"></i>
+                    Início
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="py-5 bg-gradient-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <h1 class="display-4 fw-bold mb-3">
+                        <i class="fas fa-users me-3"></i>
+                        Formulário para Famílias
+                    </h1>
+                    <p class="lead mb-0">
+                        Pesquisa TEA - T4B Medicina Fimca<br>
+                        <small class="opacity-75">Jaru, Rondônia</small>
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end" data-aos="fade-left">
+                    <div class="d-inline-block bg-white bg-opacity-10 rounded-4 p-4">
+                        <i class="fas fa-heart fa-4x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- Back Button -->
+                    <div class="mb-4" data-aos="fade-up">
+                        <a href="index.html" class="btn btn-outline-primary rounded-pill">
+                            <i class="fas fa-arrow-left me-2"></i>
+                            Voltar ao Início
+                        </a>
+                    </div>
+
+                    <!-- Form Container -->
+                    <div class="form-container p-4 p-lg-5" data-aos="fade-up" data-aos-delay="200">
+                        <!-- Introduction -->
+                        <div class="text-center mb-5">
+                            <h2 class="h3 fw-bold text-primary mb-3">Pesquisa com Famílias de Pacientes</h2>
+                            <p class="text-muted">
+                                Este formulário destina-se às famílias de crianças com TEA (Transtorno do Espectro Autista) atendidas no centro. Suas respostas são fundamentais para nossa pesquisa acadêmica e são completamente confidenciais.
+                            </p>
+                        </div>
+
+                        <form id="familiaForm">
+                            <!-- Tempo de Acompanhamento -->
+                            <fieldset data-aos="fade-up" data-aos-delay="300">
+                                <legend>
+                                    <i class="fas fa-calendar-alt me-2 text-primary"></i>
+                                    Tempo de Acompanhamento
+                                </legend>
+                                
+                                <div class="form-group required">
+                                    <label class="form-label">
+                                        <i class="fas fa-clock me-1"></i>
+                                        Há quanto tempo seu filho(a) é atendido no centro?
+                                    </label>
+                                    <div class="row g-2 mt-2">
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="tempoAtendimento" value="menos-6-meses" id="menos6meses" required>
+                                                <label class="form-check-label" for="menos6meses">Menos de 6 meses</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="tempoAtendimento" value="6-meses-1-ano" id="6meses1ano" required>
+                                                <label class="form-check-label" for="6meses1ano">De 6 meses a 1 ano</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="tempoAtendimento" value="1-3-anos" id="1a3anos" required>
+                                                <label class="form-check-label" for="1a3anos">De 1 a 3 anos</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="tempoAtendimento" value="mais-3-anos" id="mais3anos" required>
+                                                <label class="form-check-label" for="mais3anos">Mais de 3 anos</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <!-- Mudanças Comportamentais -->
+                            <fieldset data-aos="fade-up" data-aos-delay="400">
+                                <legend>
+                                    <i class="fas fa-chart-line me-2 text-success"></i>
+                                    Mudanças Observadas
+                                </legend>
+                                
+                                <div class="form-group required">
+                                    <label class="form-label">
+                                        <i class="fas fa-eye me-1"></i>
+                                        Desde o início do acompanhamento, você percebeu alguma mudança no comportamento da criança?
+                                    </label>
+                                    <div class="row g-2 mt-2">
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="mudancasComportamento" value="sim-muitas" id="simMuitas" required>
+                                                <label class="form-check-label" for="simMuitas">Sim, muitas</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="mudancasComportamento" value="sim-algumas" id="simAlgumas" required>
+                                                <label class="form-check-label" for="simAlgumas">Sim, algumas</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="mudancasComportamento" value="poucas" id="poucas" required>
+                                                <label class="form-check-label" for="poucas">Poucas</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="mudancasComportamento" value="nenhuma" id="nenhuma" required>
+                                                <label class="form-check-label" for="nenhuma">Nenhuma</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group" id="mudancasDetalheGroup" style="display: none;">
+                                    <label for="mudancasDetalhe" class="form-label">
+                                        <i class="fas fa-comment me-1"></i>
+                                        Se sim, quais?
+                                    </label>
+                                    <textarea class="form-control" id="mudancasDetalhe" name="mudancasDetalhe" rows="4" placeholder="Descreva as mudanças que você observou no comportamento da criança..."></textarea>
+                                </div>
+                            </fieldset>
+
+                            <!-- Socialização -->
+                            <fieldset data-aos="fade-up" data-aos-delay="500">
+                                <legend>
+                                    <i class="fas fa-users me-2 text-info"></i>
+                                    Socialização
+                                </legend>
+                                
+                                <div class="form-group required">
+                                    <label class="form-label">
+                                        <i class="fas fa-handshake me-1"></i>
+                                        Você acredita que o tratamento contribuiu para melhorar a socialização da criança com outras pessoas?
+                                    </label>
+                                    <div class="row g-2 mt-2">
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="melhoraSocializacao" value="sim" id="socializacaoSim" required>
+                                                <label class="form-check-label" for="socializacaoSim">Sim</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="melhoraSocializacao" value="nao" id="socializacaoNao" required>
+                                                <label class="form-check-label" for="socializacaoNao">Não</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="melhoraSocializacao" value="parcialmente" id="socializacaoParcial" required>
+                                                <label class="form-check-label" for="socializacaoParcial">Parcialmente</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <!-- Acolhimento pelos Profissionais -->
+                            <fieldset data-aos="fade-up" data-aos-delay="600">
+                                <legend>
+                                    <i class="fas fa-heart me-2 text-danger"></i>
+                                    Acolhimento Profissional
+                                </legend>
+                                
+                                <div class="form-group required">
+                                    <label class="form-label">
+                                        <i class="fas fa-user-md me-1"></i>
+                                        Você se sente acolhido(a) e orientado(a) pelos profissionais do centro?
+                                    </label>
+                                    <div class="row g-2 mt-2">
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="acolhimentoProfissionais" value="sim" id="acolhimentoSim" required>
+                                                <label class="form-check-label" for="acolhimentoSim">Sim</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="acolhimentoProfissionais" value="nao" id="acolhimentoNao" required>
+                                                <label class="form-check-label" for="acolhimentoNao">Não</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="acolhimentoProfissionais" value="as-vezes" id="acolhimentoVezes" required>
+                                                <label class="form-check-label" for="acolhimentoVezes">Às vezes</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="acolhimentoComentario" class="form-label">
+                                        <i class="fas fa-comment-dots me-1"></i>
+                                        Comente, se desejar:
+                                    </label>
+                                    <textarea class="form-control" id="acolhimentoComentario" name="acolhimentoComentario" rows="3" placeholder="Compartilhe sua experiência com os profissionais do centro..."></textarea>
+                                </div>
+                            </fieldset>
+
+                            <!-- Dificuldades do Dia a Dia -->
+                            <fieldset data-aos="fade-up" data-aos-delay="700">
+                                <legend>
+                                    <i class="fas fa-exclamation-triangle me-2 text-warning"></i>
+                                    Desafios Cotidianos
+                                </legend>
+                                
+                                <div class="form-group">
+                                    <label for="dificuldadesDiarias" class="form-label">
+                                        <i class="fas fa-home me-1"></i>
+                                        Quais são as principais dificuldades que você enfrenta no dia a dia com seu filho(a)?
+                                    </label>
+                                    <textarea class="form-control" id="dificuldadesDiarias" name="dificuldadesDiarias" rows="4" placeholder="Descreva as principais dificuldades enfrentadas no cotidiano..."></textarea>
+                                </div>
+                            </fieldset>
+
+                            <!-- Melhorias na Comunicação -->
+                            <fieldset data-aos="fade-up" data-aos-delay="800">
+                                <legend>
+                                    <i class="fas fa-comments me-2 text-primary"></i>
+                                    Comunicação
+                                </legend>
+                                
+                                <div class="form-group required">
+                                    <label class="form-label">
+                                        <i class="fas fa-microphone me-1"></i>
+                                        Você já notou melhorias na comunicação da criança após o início do acompanhamento?
+                                    </label>
+                                    <div class="row g-2 mt-2">
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="melhoriasComunicacao" value="sim" id="comunicacaoSim" required>
+                                                <label class="form-check-label" for="comunicacaoSim">Sim</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="melhoriasComunicacao" value="nao" id="comunicacaoNao" required>
+                                                <label class="form-check-label" for="comunicacaoNao">Não</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="melhoriasComunicacao" value="ainda-nao-percebi" id="comunicacaoAinda" required>
+                                                <label class="form-check-label" for="comunicacaoAinda">Ainda não percebi mudanças</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <!-- Impacto na Rotina Familiar -->
+                            <fieldset data-aos="fade-up" data-aos-delay="900">
+                                <legend>
+                                    <i class="fas fa-home me-2 text-success"></i>
+                                    Impacto na Família
+                                </legend>
+                                
+                                <div class="form-group required">
+                                    <label class="form-label">
+                                        <i class="fas fa-calendar-check me-1"></i>
+                                        O atendimento do centro impactou positivamente a rotina da sua família?
+                                    </label>
+                                    <div class="row g-2 mt-2">
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="impactoRotinaFamiliar" value="sim" id="rotinaImpactoSim" required>
+                                                <label class="form-check-label" for="rotinaImpactoSim">Sim</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="impactoRotinaFamiliar" value="nao" id="rotinaImpactoNao" required>
+                                                <label class="form-check-label" for="rotinaImpactoNao">Não</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="impactoRotinaFamiliar" value="em-parte" id="rotinaImpactoParte" required>
+                                                <label class="form-check-label" for="rotinaImpactoParte">Em parte</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group" id="impactoRotinaDetalheGroup" style="display: none;">
+                                    <label for="impactoRotinaDetalhe" class="form-label">
+                                        <i class="fas fa-edit me-1"></i>
+                                        Se quiser, descreva como:
+                                    </label>
+                                    <textarea class="form-control" id="impactoRotinaDetalhe" name="impactoRotinaDetalhe" rows="3" placeholder="Descreva como o atendimento impactou a rotina da sua família..."></textarea>
+                                </div>
+                            </fieldset>
+
+                            <!-- Submit Section -->
+                            <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="1000">
+                                <button type="submit" class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-lg">
+                                    <i class="fas fa-paper-plane me-2"></i>
+                                    Enviar Formulário
+                                </button>
+                                
+                                <div class="mt-3">
+                                    <small class="text-muted">
+                                        <i class="fas fa-lock me-1"></i>
+                                        Suas informações são confidenciais e destinadas exclusivamente à pesquisa acadêmica
+                                    </small>
+                                </div>
+                            </div>
+
+                            <!-- Loading and Messages -->
+                            <div id="loading" class="loading">
+                                <div class="spinner"></div>
+                                <p class="text-muted">Enviando formulário...</p>
+                            </div>
+
+                            <div id="successMessage" class="success-message">
+                                <i class="fas fa-check-circle me-2"></i>
+                                <strong>Sucesso!</strong> Formulário enviado com sucesso. Obrigado pela sua participação!
+                            </div>
+
+                            <div id="errorMessage" class="error-message">
+                                <i class="fas fa-exclamation-circle me-2"></i>
+                                <strong>Erro!</strong> Ocorreu um erro ao enviar o formulário. Tente novamente.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">
+                        <i class="fas fa-puzzle-piece me-2 text-primary"></i>
+                        &copy; 2024 - Pesquisa TEA - T4B Medicina Fimca
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0 text-light opacity-75">
+                        Desenvolvido para fins acadêmicos
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 600,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Show/hide detail fields based on responses
+        document.querySelectorAll('input[name="mudancasComportamento"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const detalheGroup = document.getElementById('mudancasDetalheGroup');
+                if (this.value !== 'nenhuma') {
+                    detalheGroup.style.display = 'block';
+                } else {
+                    detalheGroup.style.display = 'none';
+                }
+            });
+        });
+
+        document.querySelectorAll('input[name="impactoRotinaFamiliar"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const detalheGroup = document.getElementById('impactoRotinaDetalheGroup');
+                if (this.value === 'sim' || this.value === 'em-parte') {
+                    detalheGroup.style.display = 'block';
+                } else {
+                    detalheGroup.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    
+    <!-- Form Script -->
+    <script src="script-familia.js"></script>
+</body>
+</html>
