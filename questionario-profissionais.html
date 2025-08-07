@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário para Profissionais da Saúde - TEA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #28a745;
+            --secondary-color: #20c997;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
+        
+        .form-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 2rem auto;
+            max-width: 800px;
+        }
+        
+        .form-header {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px 15px 0 0;
+            text-align: center;
+        }
+        
+        .form-body {
+            padding: 2rem;
+        }
+        
+        .question-group {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #007bff;
+        }
+        
+        .question-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .form-check {
+            margin-bottom: 0.75rem;
+        }
+        
+        .form-check-input:checked {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+        
+        .btn-submit {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            border: none;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+        }
+        
+        .nav-links {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .nav-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .nav-links a.active {
+            color: #007bff;
+            font-weight: 600;
+        }
+        
+        .input-group {
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-links">
+            <a href="questionario-professores.html"><i class="fas fa-chalkboard-teacher"></i> Professores</a>
+            <a href="questionario-profissionais.html" class="active"><i class="fas fa-user-md"></i> Profissionais da Saúde</a>
+        </div>
+        
+        <div class="form-container">
+            <div class="form-header">
+                <h1><i class="fas fa-user-md me-3"></i>Questionário para Profissionais da Área</h1>
+                <p class="mb-0">Saúde/Terapias - Pesquisa sobre TEA e Desenvolvimento da Comunicação</p>
+            </div>
+            
+            <div class="form-body">
+                <form id="profissionalForm">
+                    <div class="question-group">
+                        <div class="question-title">1. Qual sua área de atuação?</div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" id="q1_fono" value="fonoaudiologia" required>
+                            <label class="form-check-label" for="q1_fono">Fonoaudiologia</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" id="q1_psico" value="psicologia">
+                            <label class="form-check-label" for="q1_psico">Psicologia</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" id="q1_to" value="terapia_ocupacional">
+                            <label class="form-check-label" for="q1_to">Terapia Ocupacional</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" id="q1_psicopeda" value="psicopedagogia">
+                            <label class="form-check-label" for="q1_psicopeda">Psicopedagogia</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" id="q1_outra" value="outra">
+                            <label class="form-check-label" for="q1_outra">Outra</label>
+                        </div>
+                        <div class="input-group" id="outraArea" style="display: none;">
+                            <input type="text" class="form-control" name="q1_outra_especificar" placeholder="Especifique sua área de atuação">
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <div class="question-title">2. Há quanto tempo você trabalha com crianças com TEA?</div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" id="q2_menos1" value="menos_1_ano" required>
+                            <label class="form-check-label" for="q2_menos1">Menos de 1 ano</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" id="q2_1a3" value="1_a_3_anos">
+                            <label class="form-check-label" for="q2_1a3">1 a 3 anos</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" id="q2_3a5" value="3_a_5_anos">
+                            <label class="form-check-label" for="q2_3a5">3 a 5 anos</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" id="q2_mais5" value="mais_5_anos">
+                            <label class="form-check-label" for="q2_mais5">Mais de 5 anos</label>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <div class="question-title">3. Na sua experiência, quais os principais avanços observados na comunicação de crianças com TEA que fazem acompanhamento terapêutico regular?</div>
+                        <textarea class="form-control" name="q3" rows="4" placeholder="Descreva os principais avanços observados..." required></textarea>
+                    </div>
+
+                    <div class="question-group">
+                        <div class="question-title">4. Você percebe alguma diferença significativa na comunicação entre crianças com TEA que fazem terapia e aquelas que não fazem?</div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q4" id="q4_sim" value="sim" required>
+                            <label class="form-check-label" for="q4_sim">Sim</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q4" id="q4_nao" value="nao">
+                            <label class="form-check-label" for="q4_nao">Não</label>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <div class="question-title">5. Se sim, quais?</div>
+                        <textarea class="form-control" name="q5" rows="3" placeholder="Descreva as diferenças observadas..."></textarea>
+                    </div>
+
+                    <div class="question-group">
+                        <div class="question-title">6. Quais os sinais mais claros de evolução comunicativa em crianças com TEA após início da terapia?</div>
+                        <textarea class="form-control" name="q6" rows="4" placeholder="Descreva os sinais de evolução mais evidentes..." required></textarea>
+                    </div>
+
+                    <div class="question-group">
+                        <div class="question-title">7. Como você avalia a influência do ambiente escolar no desenvolvimento da comunicação de crianças com TEA?</div>
+                        <textarea class="form-control" name="q7" rows="4" placeholder="Descreva sua avaliação sobre a influência do ambiente escolar..." required></textarea>
+                    </div>
+
+                    <div class="question-group">
+                        <div class="question-title">8. Em sua opinião, o que poderia ser feito nas escolas para melhorar a comunicação de crianças com TEA, principalmente daquelas que não têm acesso à terapia?</div>
+                        <textarea class="form-control" name="q8" rows="4" placeholder="Descreva suas sugestões para as escolas..." required></textarea>
+                    </div>
+
+                    <div class="question-group">
+                        <div class="question-title">9. Você tem algum tipo de contato ou parceria com professores ou escolas para acompanhar o desenvolvimento das crianças no ambiente escolar?</div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q9" id="q9_sim" value="sim" required>
+                            <label class="form-check-label" for="q9_sim">Sim</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q9" id="q9_nao" value="nao">
+                            <label class="form-check-label" for="q9_nao">Não</label>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <div class="question-title">10. Se sim, como ocorre essa parceria?</div>
+                        <textarea class="form-control" name="q10" rows="3" placeholder="Descreva como funciona a parceria com as escolas..."></textarea>
+                    </div>
+
+                    <div class="question-group">
+                        <div class="question-title">11. Em sua prática, qual o papel das famílias no estímulo à comunicação de crianças com TEA?</div>
+                        <textarea class="form-control" name="q11" rows="4" placeholder="Descreva o papel das famílias no processo..." required></textarea>
+                    </div>
+
+                    <div class="question-group">
+                        <div class="question-title">12. Gostaria de acrescentar algum comentário sobre a importância da terapia no desenvolvimento comunicativo de crianças com TEA?</div>
+                        <textarea class="form-control" name="q12" rows="4" placeholder="Compartilhe seus comentários adicionais..."></textarea>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-submit">
+                            <i class="fas fa-paper-plane me-2"></i>
+                            Enviar Questionário
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Importar o essencial do nosso arquivo de inicialização
+        import { db } from './firebase-init.js';
+        import { collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+
+        // Lógica para mostrar/ocultar o campo "Outra área"
+        document.querySelectorAll('input[name="q1"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const outraArea = document.getElementById('outraArea');
+                if (this.value === 'outra') {
+                    outraArea.style.display = 'block';
+                    outraArea.querySelector('input').required = true;
+                } else {
+                    outraArea.style.display = 'none';
+                    outraArea.querySelector('input').required = false;
+                }
+            });
+        });
+
+        // Lógica de envio do formulário para o Firebase
+        const form = document.getElementById('profissionalForm');
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+
+            // Desabilitar botão e mostrar feedback visual
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Enviando...';
+
+            try {
+                // Coletar dados do formulário
+                const formData = new FormData(form);
+                const data = {};
+                for (let [key, value] of formData.entries()) {
+                    data[key] = value;
+                }
+
+                // Adicionar timestamp do servidor
+                data.timestamp = serverTimestamp();
+
+                // Enviar para o Firestore
+                const docRef = await addDoc(collection(db, "respostas-profissionais"), data);
+                
+                console.log("Document written with ID: ", docRef.id);
+                alert('Questionário enviado com sucesso! Obrigado pela sua participação.');
+                form.reset();
+
+            } catch (error) {
+                console.error("Erro ao adicionar documento: ", error);
+                alert('Ocorreu um erro ao enviar o questionário. Por favor, tente novamente.');
+            } finally {
+                // Reabilitar botão
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+            }
+        });
+    </script>
+</body>
+</html>

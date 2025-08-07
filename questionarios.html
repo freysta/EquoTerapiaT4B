@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionários TEA - Comunicação e Terapia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #28a745;
+            --secondary-color: #20c997;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .main-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+            max-width: 900px;
+            margin: 2rem auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .header p {
+            color: #6c757d;
+            font-size: 1.1rem;
+        }
+        
+        .card-option {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            height: 100%;
+        }
+        
+        .card-option:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-option.professor {
+            border-color: var(--primary-color);
+        }
+        
+        .card-option.professor:hover {
+            border-color: var(--primary-color);
+            background: linear-gradient(135deg, #f8fff9, #ffffff);
+        }
+        
+        .card-option.profissional {
+            border-color: #007bff;
+        }
+        
+        .card-option.profissional:hover {
+            border-color: #007bff;
+            background: linear-gradient(135deg, #f8fbff, #ffffff);
+        }
+        
+        .card-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .card-icon.professor {
+            color: var(--primary-color);
+        }
+        
+        .card-icon.profissional {
+            color: #007bff;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        
+        .card-description {
+            color: #6c757d;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .btn-access {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-access.professor {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+        
+        .btn-access.professor:hover {
+            background: linear-gradient(135deg, #1e7e34, #17a2b8);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+        }
+        
+        .btn-access.profissional {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+        }
+        
+        .btn-access.profissional:hover {
+            background: linear-gradient(135deg, #0056b3, #004085);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+        }
+        
+        .info-section {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        
+        .info-section h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .info-section p {
+            color: #6c757d;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-container">
+            <div class="header">
+                <h1><i class="fas fa-clipboard-list me-3"></i>Questionários sobre TEA</h1>
+                <p>Pesquisa sobre Transtorno do Espectro Autista e Desenvolvimento da Comunicação</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card-option professor">
+                        <div class="card-icon professor">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3 class="card-title">Para Professores</h3>
+                        <p class="card-description">
+                            Questionário destinado a professores que trabalham ou já trabalharam com crianças com TEA em sala de aula. Suas experiências são fundamentais para nossa pesquisa.
+                        </p>
+                        <a href="questionario-professores.html" class="btn-access professor">
+                            <i class="fas fa-arrow-right me-2"></i>
+                            Acessar Questionário
+                        </a>
+                        <div class="mt-3">
+                            <small class="text-muted">
+                                <i class="fas fa-clock me-1"></i>
+                                Tempo estimado: 10-15 minutos
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="card-option profissional">
+                        <div class="card-icon profissional">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h3 class="card-title">Para Profissionais da Saúde</h3>
+                        <p class="card-description">
+                            Questionário para profissionais da área de saúde/terapias que trabalham com crianças com TEA. Sua expertise é essencial para nosso estudo.
+                        </p>
+                        <a href="questionario-profissionais.html" class="btn-access profissional">
+                            <i class="fas fa-arrow-right me-2"></i>
+                            Acessar Questionário
+                        </a>
+                        <div class="mt-3">
+                            <small class="text-muted">
+                                <i class="fas fa-clock me-1"></i>
+                                Tempo estimado: 15-20 minutos
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <h3><i class="fas fa-info-circle me-2"></i>Sobre a Pesquisa</h3>
+                <p>
+                    Esta pesquisa tem como objetivo compreender melhor o impacto das terapias no desenvolvimento da comunicação de crianças com Transtorno do Espectro Autista (TEA). Suas respostas são confidenciais e contribuirão significativamente para o avanço do conhecimento científico na área.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
