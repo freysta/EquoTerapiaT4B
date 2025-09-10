@@ -5,9 +5,9 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAX-EqeGfLKUjRiFX6s0tFw3qUtYhddzaE",
-  authDomain: "questionarios-cliente.firebaseapp.com",
-  projectId: "questionarios-cliente",
-  storageBucket: "questionarios-cliente.firebasestorage.app",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
   messagingSenderId: "489124994951",
   appId: "1:489124994951:web:cb8eae130058c11200bd22",
   measurementId: "G-ZYNPKW1CMS"
