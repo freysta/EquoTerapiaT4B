@@ -1,0 +1,185 @@
+/* Mobile responsive styles and orange tones for Equoterapia landing page */
+
+/* Orange tones */
+.text-warning {
+    color: #ff7f50 !important; /* Coral orange */
+}
+
+.bg-warning {
+    background-color: #ff7f50 !important;
+}
+
+.bg-warning.bg-opacity-10 {
+    background-color: rgba(255, 127, 80, 0.1) !important;
+}
+
+.btn-warning {
+    background-color: #ff7f50;
+    border-color: #ff7f50;
+    color: #fff;
+}
+
+.btn-warning:hover {
+    background-color: #e6734d;
+    border-color: #e6734d;
+    color: #fff;
+}
+
+/* Enhanced Mobile Responsiveness for Landing Page */
+@media (max-width: 767.98px) {
+    .hero-section-modern .hero-content {
+        padding: 2rem !important;
+        text-align: center;
+    }
+
+    .hero-section-modern .hero-title {
+        font-size: 2rem !important;
+    }
+
+    .hero-section-modern .hero-subtitle {
+        font-size: 1rem !important;
+    }
+
+    .hero-cta .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .hero-image-wrapper {
+        display: none; /* Hide large hero image on mobile for better focus */
+    }
+
+    nav.navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    .feature-card h4 {
+        font-size: 1.25rem;
+    }
+
+    .feature-card p {
+        font-size: 0.9rem;
+    }
+
+    .partner-info p {
+        font-size: 0.9rem;
+    }
+
+    footer .social-links a {
+        font-size: 1.25rem;
+    }
+
+    /* Mobile-first carousel adjustments */
+    .carousel-caption {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+
+    /* Mobile navigation improvements */
+    .navbar-collapse {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 10px;
+        margin-top: 1rem;
+        padding: 1rem;
+    }
+
+    /* Mobile hero section optimization */
+    .hero-section-modern {
+        padding: 1rem 0;
+    }
+
+    /* Mobile feature cards */
+    .feature-card {
+        margin-bottom: 1.5rem;
+        padding: 1.5rem !important;
+    }
+
+    /* Mobile partnership section */
+    .partner-info {
+        text-align: center;
+        padding: 1.5rem !important;
+    }
+
+    .partner-info .row > div {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 1.8rem !important;
+        line-height: 1.3;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem !important;
+    }
+
+    .display-5 {
+        font-size: 1.8rem !important;
+    }
+
+    .display-6 {
+        font-size: 1.5rem !important;
+    }
+
+    .lead {
+        font-size: 1rem !important;
+    }
+
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .feature-card h4 {
+        font-size: 1.1rem;
+    }
+
+    .feature-card p {
+        font-size: 0.85rem;
+    }
+
+    /* Mobile carousel */
+    .carousel-item img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Landscape mobile optimization */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-section-modern {
+        min-height: 100vh;
+    }
+
+    .hero-content-wrapper {
+        min-height: 100vh;
+    }
+
+    .hero-image-wrapper {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+}
