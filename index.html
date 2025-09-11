@@ -9,10 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="mobile-responsive.css">
-
-
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile-responsive.css">
 </head>
 <body>
   
@@ -48,12 +46,41 @@
     </nav>
 
   
-    <section class="hero">
-    <img src="images/FotoMeninacomCavaloSol.jpeg" alt="Criança interagindo com cavalo" class="hero-background-img">
-    <div class="hero-content">
-        <h1>Equoterapia: Transformando Vidas Através da Conexão com Cavalos</h1>
-        <p>Descubra os benefícios terapêuticos da equoterapia e como ela pode promover o desenvolvimento físico, mental e social.</p>
-        <a href="#saiba-mais" class="btn">Saiba Mais</a>
+    <section id="home" class="hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Column: Text Content -->
+            <div class="col-lg-6 hero-text-column order-lg-1 order-2">
+                <span class="hero-tag">Pesquisa Acadêmica T4B</span>
+                <h1 class="hero-title">
+                    Comunicação em<br>
+                    Crianças com <span class="tea-highlight">TEA</span> na<br>
+                <span class="text-success">Equoterapia</span>
+                </h1>
+                <p class="hero-description">
+                    <span class="lead">Perspectivas de Pais e Profissionais no <strong>Espaço Equus – Ji-Paraná (RO)</strong>.</span> Uma pesquisa acadêmica sobre os benefícios da <span class="equoterapia-highlight">equoterapia</span> no desenvolvimento da comunicação de crianças com Transtorno do Espectro Autista.
+                </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-4">
+                    <a href="#about" class="btn btn-primary btn-lg hero-main-cta">
+                        Saiba Mais <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-link hero-secondary-cta">
+                        <i class="fas fa-bars me-2"></i> Entre em Contato
+                    </a>
+                </div>
+            </div>
+            <!-- Right Column: Image and Info Card -->
+            <div class="col-lg-6 hero-image-column position-relative order-lg-2 order-1">
+                <div class="hero-image-wrapper">
+                    <img src="images/FotoMeninacomCavaloSol.jpeg" alt="Criança interagindo com cavalo" class="img-fluid rounded-4 shadow-lg">
+                    <!-- Green overlay removed -->
+                    <div class="info-card bg-white p-3 rounded-3 shadow-sm">
+                        <h5 class="fw-bold text-primary mb-2">Pesquisa Acadêmica</h5>
+                        <p class="text-muted small mb-0">Estudo sobre TEA e Equoterapia em Ji-Paraná/RO.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -300,13 +327,13 @@
     </section>
 
   
-    <section class="py-5 bg-light">
+    <section id="services" class="py-5 bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center mb-5" data-aos="fade-up">
                     <h2 class="display-6 fw-bold text-dark mb-4">
                         <i class="fas fa-cogs text-primary me-3"></i>
-                        Como Funciona na Prática?
+                        Nossa Metodologia
                     </h2>
                     <p class="lead text-muted">
                         Nossa metodologia de pesquisa combina observação direta e entrevistas qualitativas para uma análise completa dos benefícios da equoterapia.
@@ -367,7 +394,7 @@
 
 
   
-    <section class="py-5 bg-white">
+    <section id="contact" class="py-5 bg-white">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
@@ -538,6 +565,32 @@
                     target.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
+                    });
+                }
+            });
+        });
+
+        
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
+rolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
+               block: 'start'
                     });
                 }
             });

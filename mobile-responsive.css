@@ -1,185 +1,127 @@
-/* Mobile responsive styles and orange tones for Equoterapia landing page */
-
-/* Orange tones */
-.text-warning {
-    color: #ff7f50 !important; /* Coral orange */
+/* =================================================================== */
+/* DESIGN SYSTEM & VARIÁVEIS GLOBAIS                                */
+/* =================================================================== */
+:root {
+    --cor-primaria: #E57373; /* Coral/laranja queimado */
+    --cor-primaria-hover: #D32F2F;
+    --cor-texto-titulo: #37474F;  /* Chumbo quente */
+    --cor-texto-corpo: #546E7A;   /* Cinza azulado */
+    --cor-fundo: #FDFCFC;
+    --sombra-card: 0 12px 35px rgba(55, 71, 79, 0.12);
+    --raio-borda-container: 28px;
+    --raio-borda-card: 18px;
+    --fonte-principal: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-.bg-warning {
-    background-color: #ff7f50 !important;
+/* =================================================================== */
+/* ESTILOS DE BASE (sem alterações)                                  */
+/* =================================================================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-corpo);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
 }
 
-.bg-warning.bg-opacity-10 {
-    background-color: rgba(255, 127, 80, 0.1) !important;
+/* =================================================================== */
+/* HERO SECTION E O CARD CORRIGIDO                                  */
+/* =================================================================== */
+.hero-container {
+    position: relative;
+    padding: 0 1.25rem;
+    margin-bottom: 8rem; /* Espaço para o card e conteúdo abaixo respirarem */
 }
 
-.btn-warning {
-    background-color: #ff7f50;
-    border-color: #ff7f50;
+.hero-image {
+    width: 100%;
+    height: 65vh;
+    object-fit: cover;
+    object-position: center 30%;
+    border-radius: var(--raio-borda-container);
+    display: block;
+}
+
+/*
+   >>> ATENÇÃO: AS MELHORIAS ESTÃO AQUI <<<
+*/
+.info-card {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 3rem); /* Um pouco mais de margem nas laterais */
+    max-width: 400px;
+
+    /* 1. Efeito "Vidro Fosco" (Glassmorphism) */
+    background: rgba(255, 255, 255, 0.8); /* Fundo branco com mais transparência */
+    backdrop-filter: blur(15px);          /* Desfoque mais intenso no fundo */
+    -webkit-backdrop-filter: blur(15px);  /* Suporte para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borda sutil que captura a luz */
+
+    /* 2. Estilo e Sombra */
+    border-radius: var(--raio-borda-card);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra mais suave e difusa */
+    padding: 1.5rem;
+    text-align: center;
+    z-index: 10;
+}
+
+/* 3. Tipografia Corrigida Dentro do Card */
+.info-card-title {
+    font-size: 1.25rem; /* Tamanho um pouco menor para mais elegância */
+    font-weight: 700;
+    color: var(--cor-texto-titulo); /* Usa a cor padrão de títulos (chumbo quente) */
+    margin-bottom: 0.25rem; /* Menos espaço entre título e subtítulo */
+}
+
+.info-card-subtitle {
+    font-size: 0.95rem;
+    color: var(--cor-texto-corpo); /* Usa a cor padrão de texto (cinza azulado) */
+    line-height: 1.5;
+}
+
+
+/* =================================================================== */
+/* CONTEÚDO PRINCIPAL (sem alterações)                                */
+/* =================================================================== */
+.main-content {
+    padding: 0 1.5rem;
+    text-align: center;
+}
+.main-title {
+    font-size: clamp(2rem, 8vw, 2.75rem);
+    font-weight: 800;
+    line-height: 1.25;
+    color: var(--cor-texto-titulo);
+    margin-bottom: 1.25rem;
+}
+.main-title .highlight {
+    color: var(--cor-primaria);
+    font-weight: 800;
+}
+.main-subtitle {
+    max-width: 550px;
+    margin: 0 auto 2.5rem auto;
+    font-size: 1.1rem;
+}
+.cta-button {
+    display: inline-block;
+    background: var(--cor-primaria);
     color: #fff;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(229, 115, 115, 0.4);
+    transition: all 0.3s ease;
+    margin-bottom: 3rem;
 }
-
-.btn-warning:hover {
-    background-color: #e6734d;
-    border-color: #e6734d;
-    color: #fff;
-}
-
-/* Enhanced Mobile Responsiveness for Landing Page */
-@media (max-width: 767.98px) {
-    .hero-section-modern .hero-content {
-        padding: 2rem !important;
-        text-align: center;
-    }
-
-    .hero-section-modern .hero-title {
-        font-size: 2rem !important;
-    }
-
-    .hero-section-modern .hero-subtitle {
-        font-size: 1rem !important;
-    }
-
-    .hero-cta .btn {
-        display: block;
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-
-    .hero-image-wrapper {
-        display: none; /* Hide large hero image on mobile for better focus */
-    }
-
-    nav.navbar {
-        padding: 0.5rem 1rem;
-    }
-
-    .navbar-brand {
-        font-size: 1.25rem;
-    }
-
-    .feature-card h4 {
-        font-size: 1.25rem;
-    }
-
-    .feature-card p {
-        font-size: 0.9rem;
-    }
-
-    .partner-info p {
-        font-size: 0.9rem;
-    }
-
-    footer .social-links a {
-        font-size: 1.25rem;
-    }
-
-    /* Mobile-first carousel adjustments */
-    .carousel-caption {
-        font-size: 0.8rem;
-        padding: 0.5rem;
-    }
-
-    /* Mobile navigation improvements */
-    .navbar-collapse {
-        background: rgba(255, 255, 255, 0.95);
-        border-radius: 10px;
-        margin-top: 1rem;
-        padding: 1rem;
-    }
-
-    /* Mobile hero section optimization */
-    .hero-section-modern {
-        padding: 1rem 0;
-    }
-
-    /* Mobile feature cards */
-    .feature-card {
-        margin-bottom: 1.5rem;
-        padding: 1.5rem !important;
-    }
-
-    /* Mobile partnership section */
-    .partner-info {
-        text-align: center;
-        padding: 1.5rem !important;
-    }
-
-    .partner-info .row > div {
-        margin-bottom: 1.5rem;
-    }
-}
-
-/* Extra small mobile devices */
-@media (max-width: 576px) {
-    .hero-title {
-        font-size: 1.8rem !important;
-        line-height: 1.3;
-    }
-
-    .hero-subtitle {
-        font-size: 0.95rem !important;
-    }
-
-    .display-5 {
-        font-size: 1.8rem !important;
-    }
-
-    .display-6 {
-        font-size: 1.5rem !important;
-    }
-
-    .lead {
-        font-size: 1rem !important;
-    }
-
-    .btn-lg {
-        padding: 0.75rem 1.5rem;
-        font-size: 0.95rem;
-    }
-
-    .feature-card h4 {
-        font-size: 1.1rem;
-    }
-
-    .feature-card p {
-        font-size: 0.85rem;
-    }
-
-    /* Mobile carousel */
-    .carousel-item img {
-        height: 200px;
-        object-fit: cover;
-    }
-
-    .carousel-caption h5 {
-        font-size: 1rem;
-    }
-
-    .carousel-caption p {
-        font-size: 0.8rem;
-    }
-}
-
-/* Landscape mobile optimization */
-@media (max-width: 768px) and (orientation: landscape) {
-    .hero-section-modern {
-        min-height: 100vh;
-    }
-
-    .hero-content-wrapper {
-        min-height: 100vh;
-    }
-
-    .hero-image-wrapper {
-        display: none;
-    }
-
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
+.cta-button:hover, .cta-button:focus {
+    transform: translateY(-4px);
+    background: var(--cor-primaria-hover);
+    box-shadow: 0 8px 25px rgba(211, 47, 47, 0.3);
 }

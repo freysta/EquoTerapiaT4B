@@ -94,56 +94,60 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .hero {
-    background-image: url('images/FotoMeninaComCavaloSol.jpeg');
-    background-size: cover;
-    background-position: center center;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-    position: relative; /* Added for pseudo-element positioning */
-    overflow: hidden; /* Ensures blur doesn't spill out */
+    min-height: 80vh; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    background-color: #f8fafc; /* Light background for the section */
+    padding-top: 50px; /* Added padding to prevent sticking to navbar */
+    padding-bottom: 0; /* Ensure bottom padding is 0 */
 }
 
-/* New pseudo-element for blur overlay */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+.hero-text-column {
+    padding-right: 30px; /* Space between text and image */
+}
+
+.hero-text-column h1,
+.hero-text-column p {
+    color: var(--dark-color); /* Ensure text is visible */
+}
+
+.hero-image-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    border-radius: 1rem; /* Matches img-fluid rounded-4 */
+    overflow: hidden;
+    line-height: 0; /* Remove extra space below image */
+}
+
+.hero-image-wrapper img {
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 128, 0, 0.3); /* Semi-transparent green */
-    backdrop-filter: blur(1.5px); /* Blur effect */
-    z-index: 1; /* Below text, above background image */
-}
-
-/* Styles for text background */
-.hero h1,
-.hero p {
-    position: relative; /* To bring text above the overlay */
-    z-index: 2; /* Above the blur overlay */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    padding: 10px 20px;
-    border-radius: 8px;
-    display: inline-block; /* To make background fit content */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.hero h1 {
-    margin-bottom: 20px; /* Add some space between h1 and p */
+    height: auto;
+    display: block;
 }
 
 
-.hero-background-img {
+
+.info-card {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1; /* Ensure it's behind the content */
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 250px;
+    z-index: 2;
+    padding: 15px; /* Increased padding */
 }
+
+.info-card p {
+    line-height: 1.3; /* Adjust line height for better readability */
+}
+
+
+
 
 /* Navigation Updates */
 .navbar-light .navbar-nav .nav-link {
@@ -511,7 +515,9 @@ fieldset legend {
         transform: translateY(0);
     }
 }
-
+text-sucess {
+    color: #28a745 !important;
+}
 /* Footer */
 footer {
     background: linear-gradient(135deg, #1f2937 0%, #111827 100%) !important;
@@ -700,6 +706,30 @@ footer {
 
     .navbar-nav .nav-item {
         margin: 5px 0;
+    }
+
+    .hero-image-wrapper img {
+        height: 55vh; /* Image fills more of the screen */
+        object-fit: cover;
+        object-position: top;
+        margin-top: 1rem; /* Padding at the top of the image */
+    }
+
+    .hero-image-wrapper {
+        position: relative; /* Make it a positioning context for the info card */
+        padding-bottom: 1rem; /* Padding at the bottom of the image area */
+    }
+
+    .info-card {
+        position: absolute;
+        top: 0; /* Card at the very top of the image */
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 2rem);
+        max-width: 300px;
+        padding: 1.5rem 1rem;
+        z-index: 2;
+        display: none; /* Hide on mobile */
     }
 }
 
@@ -933,7 +963,7 @@ input[type="checkbox"] {
 }
 
 .form-check-input[type="checkbox"]:checked {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3csvg%3e");
 }
 
 .form-check-label {
@@ -1259,8 +1289,96 @@ input[type="checkbox"] {
     -webkit-backdrop-filter: blur(10px);
 }
 
-@media (min-width: 992px) {
-    .hero {
-        padding: 200px 20px; /* Increased padding for desktop */
+/* Hero Section - Left Column Elements */
+.hero-tag {
+    display: inline-block;
+    background-color: #FF7F50; /* Specific orange background */
+    opacity: 1; /* Full opacity */
+    color: white; /* White text */
+    padding: 5px 15px;
+    border-radius: 20px; /* Pill shape */
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem; /* Large size */
+    font-weight: 700; /* Bold */
+    color: #444444; /* Slightly grayer shade */
+    line-height: 1.1;
+    margin-bottom: 35px;
+}
+
+.tea-highlight {
+    color: #FF7F50; /* Orange text */
+    padding: 1px 4px; /* Further adjusted padding */
+    border-radius: 8px; /* More rounded */
+    white-space: nowrap; /* Prevent line break inside TEA */
+}
+
+.hero-description {
+    font-family: 'Poppins', sans-serif; /* Same font as title */
+    font-size: 1.1rem;
+    color: #616161; /* Slightly more gray */
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: justify; /* Justify text */
+}
+
+.hero-description strong {
+    font-weight: 600;
+}
+
+.hero-main-cta {
+    background-color: #FF7F50; /* Specific orange background */
+    border-color: #FF7F50;
+    color: white;
+    border-radius: 50px; /* Pill shape */
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.hero-main-cta:hover {
+    background-color: #FF7F50; /* Darker orange on hover */
+    border-color: #FF7F50;
+    opacity: 0.8; /* Slightly darker on hover */
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.hero-secondary-cta {
+    color: var(--dark-color); /* Dark text */
+    font-weight: 600;
+    text-decoration: none;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.hero-secondary-cta:hover {
+    color: #FF7F50; /* Specific orange on hover */
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments for hero text column */
+@media (max-width: 991.98px) {
+    .hero-text-column {
+        padding-right: 15px;
+        padding-left: 15px;
+        text-align: center; /* Center text on smaller screens */
     }
+    .hero-title {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+    .d-md-flex {
+        justify-content: center !important; /* Center buttons on smaller screens */
+    }
+}
+
+.equoterapia-highlight {
+    color: var(--primary-color);
 }
